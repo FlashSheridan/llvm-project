@@ -27,7 +27,6 @@ LogicalResult mlir::TableGenLspServerMain(int argc, char **argv) {
                                   "messages delimited by `// -----` lines, "
                                   "with // comment support")),
       llvm::cl::init(JSONStreamStyle::Standard),
-      llvm::cl::Hidden,
   };
   llvm::cl::opt<bool> litTest{
       "lit-test",
