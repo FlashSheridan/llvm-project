@@ -18,6 +18,9 @@ using namespace mlir;
 using namespace mlir::lsp;
 
 LogicalResult mlir::TableGenLspServerMain(int argc, char **argv) {
+
+  llvm::cl::opt<std::string> InputFilename(llvm::cl::Positional, llvm::cl::desc("< <JSON file>"), llvm::cl::init("-"));
+
   llvm::cl::opt<JSONStreamStyle> inputStyle{
       "input-style",
       llvm::cl::desc("Input JSON stream encoding"),
